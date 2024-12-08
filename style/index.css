@@ -10,7 +10,7 @@
             height: 100vh;
             background-color: rgb(0, 0, 0);
         }
-        .navbar-custome{
+        /* .navbar-custome{
             width: 70%;
             height: 60px;
             margin: auto;
@@ -29,7 +29,7 @@
             outline: none;
             box-shadow: none;
             transition: transform 0.2s ease-in-out;
-        }
+        } */
 
         .Best-selling{
             width: 70dvw;
@@ -72,7 +72,7 @@
             .home-page{
                 height: fit-content;
             }
-            .navbar-custome{
+            /* .navbar-custome{
                 width: 100%;
             }
             .carousel-container {
@@ -88,7 +88,7 @@
             }
             .new-product{
                 width: 100%;
-            }
+            } */
         }
 
         @media (max-width: 480px) {
