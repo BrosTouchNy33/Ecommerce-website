@@ -231,16 +231,19 @@ function toggleCheckoutPopup() {
     const checkoutPopup = document.getElementById('checkoutPopup');
     checkoutPopup.classList.toggle('active'); // Show or hide the checkout popup
 }
-function showCheckoutPopup() {
-    // Hide the modal-xl
-    const modals = document.querySelectorAll('.modal-xl');
-    modals.forEach((modal) => {
-        const bootstrapModal = bootstrap.Modal.getInstance(modal);
-        if (bootstrapModal) {
-            bootstrapModal.hide(); // Hide modal-xl using Bootstrap's hide method
-        }
-    });
+function showCheckoutPopup(modalId) {
+   // Hide the modal using Bootstrap's modal API
+   const cartModal = document.getElementById("cartModal");
+   const modal = bootstrap.Modal.getInstance(cartModal);
+   const productModal = document.getElementById(modalId);
+    const modalXL = bootstrap.Modal.getInstance(productModal);
+   if (modal) {
+       modal.hide();
+    //    modalXL.hide();
 
+   }
+
+  
     // Hide the cart detail popup
     const cartPopup = document.getElementById('cartPopup');
     if (cartPopup) {
@@ -252,6 +255,7 @@ function showCheckoutPopup() {
     const checkoutPopup = document.getElementById('checkoutPopup');
     checkoutPopup.classList.add('active'); // Show the checkout popup
 }
+
 
 
 
@@ -282,7 +286,7 @@ function proceedToPayment() {
         return;
     }
     alert("Proceeding to payment...");
-    // Implement payment logic here
+
 }
 
 
